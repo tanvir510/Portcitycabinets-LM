@@ -457,7 +457,9 @@ dl {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 80px 0px;
+  /* padding: 80px 0px; */
+  display: flex;
+  align-items: center;
 }
 
 .lm-banner-sec .primary-btn {
