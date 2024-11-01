@@ -575,7 +575,7 @@ dl {
 .lm-sec-three .lm-content {
   background-color: var(--lm-color-third);
   padding: 50px 80px;
-  padding-left: 300px;
+  padding-left: 200px;
 }
 
 .lm-sec-three .lm-content .lm-sec-title {
@@ -595,6 +595,11 @@ dl {
 .lm-sec-three .lm-thumb,
 .lm-sec-three .lm-thumb img {
   height: 100%;
+}
+
+.lm-sec-three .lm-thumb img {
+  object-fit: cover;
+  object-position: left;
 }
 
 .lm-sec-three .lm-content ul li {
@@ -971,6 +976,13 @@ dl {
 /*================================================
               RESPONSIVE STYLES
 =================================================== */
+@media (max-width: 1370px) {
+  .lm-sec-three .lm-content {
+    padding: 50px 30px;
+    padding-left: 30px;
+  }
+}
+
 @media (max-width: 1200px) {
   .lm-service-item .lm-content {
     min-height: 955px;
