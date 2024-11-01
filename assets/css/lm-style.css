@@ -574,8 +574,8 @@ dl {
 =================================================== */
 .lm-sec-three .lm-content {
   background-color: var(--lm-color-third);
-  padding: 50px 30px;
-  padding-left: 80px;
+  padding: 50px 80px;
+  padding-left: 300px;
 }
 
 .lm-sec-three .lm-content .lm-sec-title {
