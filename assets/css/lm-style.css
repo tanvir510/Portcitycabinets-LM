@@ -742,6 +742,10 @@ dl {
   height: auto;
 }
 
+.lm-sec-six .lm-sec-background.overlay::after {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .lm-sec-six .section-item {
   padding: 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 18px 0px;
