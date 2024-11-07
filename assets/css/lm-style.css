@@ -1,17 +1,17 @@
 /*Font*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* 
-    font-family: "Open Sans", sans-serif;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Tinos", serif;
+    font-family: "Tinos", serif;
 */
 
 /*Font End*/
 
 :root {
-  --lm-font: "Open Sans", sans-serif;
-  --lm-font-alt: "Open Sans", sans-serif;
-  --lm-color-first: #f8de08;
-  --lm-color-second: #56b849;
+  --lm-font: "Tinos", serif;
+  --lm-font-alt: "Tinos", serif;
+  --lm-color-first: #0c71c3;
+  --lm-color-second: #5b6f84;
   --lm-color-third: #212529;
   --lm-color-four: #007cb0;
   --lm-color-light: #ffffff;
@@ -54,7 +54,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
@@ -74,11 +74,19 @@ body {
   color: var(--lm-color-dark);
 }
 
+.custom-height {
+  height: 100%;
+}
+
+.custom-width {
+  width: 100%;
+}
+
 p {
   margin: 0;
   padding: 0;
-  font-size: 15px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 30px;
   font-weight: 400;
   padding: 10px 0;
   color: var(--lm-color-lite-dark);
@@ -340,35 +348,35 @@ dl {
 
 .lm-hero-btn {
   border-radius: 2px;
-  padding: 8px 20px;
-  color: var(--lm-color-lite-dark);
-  min-width: 220px;
+  padding: 10px 20px;
+  color: var(--lm-color-light);
+  min-width: 150px;
   background-color: var(--lm-color-first);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
   font-weight: 600;
   transition: all ease-in-out 0.4s;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 .lm-hero-btn img {
-  width: 35px;
+  width: 20px;
 }
 
 .lm-hero-btn.secondary {
   background-color: var(--lm-color-second);
 }
 
-/* .lm-hero-btn.secondary:hover {
+.lm-hero-btn.secondary:hover {
   color: var(--lm-color-light);
-  background-color: var(--lm-color-gray);
-} */
+  background-color: var(--lm-color-first);
+}
 
 .lm-hero-btn:hover {
-  color: var(--lm-color-gray);
-  background-color: var(--lm-color-light);
+  color: var(--lm-color-light);
+  background-color: var(--lm-color-second);
 }
 
 .lm-hero-btn-two {
@@ -408,10 +416,10 @@ dl {
   font-size: 16px;
   line-height: 27px;
   font-weight: 600;
-  padding: 10px 30px 10px 20px;
-  background-color: var(--lm-color-second);
+  padding: 0px 10px 5px;
+  background-color: transparent;
   color: var(--lm-color-third);
-  border: 1px solid #f1f1f1;
+  /* border: 1px solid #f1f1f1; */
   border-radius: 4px;
 }
 
@@ -435,26 +443,30 @@ dl {
 }
 
 .accordion-wrapper .accordion-button::after {
-  width: 17px;
-  height: 18px;
-  background-size: 16px;
-  background-image: url(../images/icon/right-arrow.svg);
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-image: url(../images/icon/bottom-arrow.png);
   transition: all 0.5s;
   display: flex;
   position: absolute;
   top: 50%;
   right: 2%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(-90deg);
 }
 .accordion-wrapper .accordion-button:not(.collapsed)::after {
-  background-image: url("../images/icon/down-arrow.svg");
-  transform: translateY(-50%);
+  background-image: url("../images/icon/bottom-arrow.png");
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .accordion-wrapper .accordion-body {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 11px;
+  box-shadow: none;
   background-color: transparent;
-  padding: 10px 15px 25px;
+  padding: 10px;
+}
+
+.accordion-wrapper .accordion-body p {
+  padding-top: 0px;
 }
 
 .section-overlap {
@@ -465,8 +477,8 @@ dl {
               Banner Section Start
 =================================================== */
 .lm-banner-sec {
-  height: 650px;
-  background-image: url("../images/banner/main-banner.svg");
+  height: 500px;
+  background-image: url("../images/banner/main-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -495,7 +507,7 @@ dl {
 
 .lm-banner-sec .banner-content {
   width: 100%;
-  max-width: 685px;
+  max-width: 700px;
 }
 
 .lm-banner-sec .banner-content .register-button {
@@ -591,7 +603,7 @@ dl {
 }
 
 .about-widget ul li a:hover {
-  color: var(--lm-color-second);
+  color: var(--lm-color-first);
 }
 
 .about-widget ul li a::after {
@@ -599,7 +611,7 @@ dl {
   width: 10px;
   height: 10px;
   content: "";
-  background: var(--lm-color-second);
+  background: var(--lm-color-first);
   border-radius: 100%;
   left: -25px;
   top: 20px;
@@ -624,39 +636,16 @@ dl {
               LM Section Four
 =================================================== */
 .lm-sec-four .lm-sec-background {
-  background-image: url("../images/banner/automobiles-oil-banner.svg");
+  background-image: url("../images/banner/port-city-cabinate-process-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: auto;
 }
 
-.lm-sec-four .section-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.lm-sec-four .lm-sec-background.overlay:after {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.lm-sec-four .element-wrapper {
-  background-color: var(--lm-color-light);
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 18px 0px;
-}
-
-.lm-sec-four .element-wrapper .lm-thumb img {
-  object-fit: cover;
-}
-
-.lm-sec-four .section-content-wrapper {
-  transform: translateY(-50px);
-}
-
-.lm-sec-four .section-content-wrapper .lm-thumb img {
-  border-radius: 10px;
+.lm-sec-four .lm-sec-background.secondary {
+  background-image: url("../images/banner/port-city-cabinate-step-banner.png");
+  /* margin-bottom: 40px; */
 }
 
 .lm-sec-four .section-element-wrapper .section-background {
@@ -669,25 +658,99 @@ dl {
   border-radius: 12px;
 }
 
-.lm-sec-four .section-element-wrapper .section-background.overlay:after {
-  border-radius: 12px;
-  background-color: rgba(4, 77, 106, 0.8);
+.lm-sec-four .lm-item {
+  padding: 25px;
+  background-color: var(--lm-color-light);
+  border-radius: 6px;
+  height: 100%;
 }
 
-.lm-sec-four .section-element-wrapper .lm-box-content {
+.lm-sec-four .lm-item .icon img {
+  width: 30px;
+  margin-bottom: 15px;
+}
+
+.lm-sec-four .lm-item .content h6 {
+  padding-bottom: 0px;
+}
+
+.lm-sec-four .lm-item .content p {
+  padding-top: 5px;
+}
+
+/*================================================
+              LM Section Five
+=================================================== */
+
+.lm-sec-five .lm-sec-background {
+  background-image: url("../images/banner/new-construction.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+
+.lm-sec-five .section-content {
+  max-width: 900px;
+  width: 100%;
+}
+
+.lm-sec-five .section-content .lm-sec-title {
+  max-width: 600px;
+  width: 100%;
+}
+
+.lm-sec-five .lm-sec-background.overlay:after {
+  background: linear-gradient(90deg, rgba(37, 37, 37, 0.9) 40%, rgba(75, 75, 75, 0.7) 60%);
+}
+
+.lm-sec-five .element-wrapper .lm-thumb img {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.lm-sec-five .element-wrapper .lm-content {
+  background-color: var(--lm-color-second);
+  border-radius: 12px;
+}
+
+.lm-sec-five .section-content-wrapper {
+  transform: translateY(-50px);
+}
+
+.lm-sec-five .section-content-wrapper .lm-thumb img {
+  border-radius: 10px;
+}
+
+.lm-sec-five .section-element-wrapper .section-background {
+  background-image: url("../images/banner/benefits-of-oil.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.lm-sec-five .section-element-wrapper .section-background.overlay:after {
+  border-radius: 12px;
+  background-color: linear-gradient(90deg, rgba(75, 75, 75, 1) 0%, rgba(37, 37, 37, 1) 74%);
+}
+
+.lm-sec-five .section-element-wrapper .lm-box-content {
   padding: 25px;
   padding-bottom: 35px;
   border-radius: 12px;
 }
 
-.lm-sec-four .section-element-wrapper .lm-box-content .action-btn {
+.lm-sec-five .section-element-wrapper .lm-box-content .action-btn {
   position: absolute;
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.lm-sec-four .section-element-wrapper .lm-box-content .action-btn a {
+.lm-sec-five .section-element-wrapper .lm-box-content .action-btn a {
   background-color: var(--lm-color-four);
   color: var(--lm-color-light);
   border-radius: 20px;
@@ -695,82 +758,136 @@ dl {
   min-width: inherit;
 }
 
-.lm-sec-four .section-element-wrapper .lm-box-content .action-btn a img {
+.lm-sec-five .section-element-wrapper .lm-box-content .action-btn a img {
   width: 15px;
-}
-
-/*================================================
-              LM Section Five
-=================================================== */
-.lm-sec-five .lm-sec-background {
-  background-image: url("../images/banner/five-reasons-banner.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: auto;
-}
-
-.lm-sec-five .section-wrapper {
-  background-color: var(--lm-color-light);
-  padding: 25px 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 18px 0px;
-  border-radius: 10px;
-}
-
-.lm-sec-five .section-bottom {
-  background-color: #f2f6fc;
-  border-radius: 5px;
-  transform: translateY(-70px);
-}
-
-.lm-sec-five .section-bottom .thumb img {
-  width: 170px;
-}
-
-.lm-sec-five .section-wrapper.section-overlap {
-  transform: translateY(-130px);
 }
 
 /*================================================
               LM Section Six
 =================================================== */
-.lm-sec-six .lm-sec-background {
-  background-image: url("../images/banner/myths-banner.svg");
+.lm-sec-six {
+  background-image: url("../images/banner/choose-the-best-kitchen-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: auto;
 }
 
-.lm-sec-six .lm-sec-background.overlay::after {
+.lm-sec-six .lm-box-content {
+  padding: 25px;
+  background-color: var(--lm-color-light);
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+
+.lm-sec-six .lm-box-content .lm-sec-title {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+/*================================================
+              LM Section Seven
+=================================================== */
+.lm-sec-seven {
+  background-image: url("../images/banner/kitchen-renovation-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+
+.lm-sec-seven.overlay:after {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.lm-sec-six .section-item {
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 18px 0px;
+.lm-sec-seven .lm-box-content {
+  padding: 30px 40px;
   background-color: var(--lm-color-light);
-  height: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
 }
 
-.lm-sec-six .section-bottom {
-  background-image: url("../images/banner/before-road-banner.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: auto;
+.lm-sec-seven .lm-box-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  padding: 15px 0px;
 }
 
-.lm-sec-six .section-bottom .lm-content {
-  background: var(--lm-color-lite-dark);
-  padding: 30px;
-  border-radius: 8px;
+.lm-sec-seven .lm-box-content ul li:first-child {
+  padding-top: 0px;
+}
+
+.lm-sec-seven .lm-box-content ul li:last-child {
+  padding-bottom: 0px;
+}
+
+.lm-sec-seven .lm-box-content ul li img {
+  width: 25px;
+}
+
+/*================================================
+              LM Section Eight
+=================================================== */
+
+.lm-sec-eight .lm-item {
+  border-left: 1px solid #5b6f84;
+  -webkit-box-shadow: -3px 4px 25px -4px rgba(0, 24, 31, 0.26);
+  -moz-box-shadow: -3px 4px 25px -4px rgba(0, 24, 31, 0.26);
+  box-shadow: -3px 4px 25px -4px rgba(0, 24, 31, 0.26);
+}
+
+.lm-sec-eight .lm-content {
+  padding: 20px;
+  min-height: 475px;
 }
 
 /*================================================
               LM Section Nine
 =================================================== */
-.lm-sec-nine {
+.lm-sec-nine .lm-sec-background {
+  background-image: url("../images/banner/trust-main-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+
+.lm-sec-nine .lm-sec-wrapper {
+  background-image: url("../images/banner/trust-inner-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+  border-radius: 12px;
+}
+
+.lm-sec-nine .lm-sec-background.overlay:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lm-sec-nine .section-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.lm-sec-nine .lm-sec-wrapper .lm-sec-inner .lm-box-content {
+  max-width: 650px;
+  width: 100%;
+  margin-right: 40px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/*================================================
+              LM Section Eleven
+=================================================== */
+.lm-sec-eleven {
   background-image: url("../images/banner/lm-form-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -780,13 +897,13 @@ dl {
 
 .lm-form-main {
   padding: 40px 35px 40px 35px;
-  background: rgb(255, 255, 255, 0.85);
+  background: rgb(246, 250, 255, 0.95);
   border-radius: 10px;
   border: 1px solid #cdcdcd;
   box-shadow: rgba(17, 12, 46, 0.35) 0px 30px 70px 0px;
 }
 
-.lm-sec-nine .lm-sec-title {
+.lm-sec-eleven .lm-sec-title {
   color: var(--lm-color-lite-dark);
 }
 
@@ -881,6 +998,9 @@ dl {
               RESPONSIVE STYLES
 =================================================== */
 @media (max-width: 1370px) {
+  .lm-sec-eight .lm-content {
+    min-height: 575px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -888,7 +1008,11 @@ dl {
     min-height: 955px;
   }
 
-  .lm-sec-nine .lm-service-item .lm-content {
+  .lm-sec-eight .lm-content {
+    min-height: 725px;
+  }
+
+  .lm-sec-thirteen .lm-service-item .lm-content {
     border: 1px solid #cdcdcd;
     min-height: 760px;
   }
@@ -902,7 +1026,7 @@ dl {
 
   .section-overlap {
     transform: translateY(0px);
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .lm-sec-five .section-bottom {
@@ -937,6 +1061,12 @@ dl {
     margin-bottom: 35px;
   }
 
+  .lm-sec-nine .lm-sec-wrapper .lm-sec-inner .lm-box-content {
+    max-width: 90%;
+    margin-right: 0px;
+    padding: 25px;
+  }
+
   .lm-service-item .lm-content {
     padding: 25px 10px;
     border: 1px solid var(--lm-color-first);
@@ -944,12 +1074,12 @@ dl {
 }
 
 @media (max-width: 991px) {
-  .lm-sec-eight .lm-thumb img {
-    margin-bottom: 20px;
+  .lm-sec-eight .lm-item {
+    margin-bottom: 40px;
   }
 
   .lm-sec-eight .lm-content {
-    margin-bottom: 10px;
+    min-height: auto;
   }
 }
 
@@ -960,15 +1090,40 @@ dl {
     min-width: 200px;
   }
 
+  .section-overlap {
+    margin-top: 20px;
+  }
+
+  .custom-height {
+    height: auto;
+  }
+
+  .custom-width {
+    width: auto;
+  }
+
   p,
   ul li {
     font-size: 14px;
     line-height: 25px;
   }
 
-  .lm-sec-four .section-content-wrapper {
+  .lm-sec-five .section-content-wrapper {
     transform: translateY(0px);
     margin-top: 20px;
+  }
+
+  .lm-sec-five .section-element-wrapper .section-background {
+    padding: 25px 20px 40px;
+  }
+
+  .lm-sec-five .section-thumb {
+    margin-bottom: 15px;
+  }
+
+  .lm-sec-five .lm-sec-title {
+    font-size: 25px;
+    line-height: 35px;
   }
 
   .lm-sec-six .section-item {
@@ -977,10 +1132,6 @@ dl {
 
   .lm-sec-five .section-bottom .thumb img {
     width: 120px;
-  }
-
-  .lm-sec-four .section-element-wrapper .section-background {
-    padding: 25px 20px 40px;
   }
 
   .lm-sec-three .content-wrapper {
@@ -1022,19 +1173,6 @@ dl {
     line-height: 25px;
   }
 
-  .lm-sec-four .section-thumb {
-    margin-bottom: 15px;
-  }
-
-  .lm-sec-four .lm-sec-title {
-    font-size: 25px;
-    line-height: 35px;
-  }
-
-  .lm-sec-seven .lm-sec-wrapper-bottom {
-    transform: translateY(0%);
-  }
-
   .lm-service-item .lm-thumb .icon img {
     width: 40px;
   }
@@ -1042,13 +1180,12 @@ dl {
   .lm-service-item {
     margin-bottom: 25px;
   }
-  .lm-sec-nine .lm-service-item .lm-content {
+  .lm-sec-thirteen .lm-service-item .lm-content {
     min-height: auto;
   }
 
-  .lm-sec-seven .lm-sec-wrapper-top .lm-thumb {
-    position: static;
-    top: 0;
+  .lm-sec-six .lm-thumb {
+    margin-top: 20px;
   }
 
   .lm-sec-title.five {
@@ -1121,38 +1258,15 @@ dl {
     padding: 7px 0px;
   }
 
-  .lm-sec-seven .lm-sec-wrapper-top .item .content {
-    padding: 25px 15px 15px;
-    min-height: auto;
-    margin-bottom: 20px;
-  }
-
-  .lm-sec-seven .lm-sec-wrapper-top {
-    transform: translateY(0px);
-    margin: 30px 0px 10px;
-  }
-
-  .lm-sec-seven .lm-sec-wrapper-top .lm-content {
-    margin-top: 20px;
-  }
-
-  .lm-sec-seven .lm-sec-wrapper-bottom .right-content .lm-sec-title {
-    font-size: 28px;
-  }
-
-  .lm-sec-seven .action-logo-btn {
-    font-size: 14px;
-  }
-
   .lm-sec-eight {
     height: auto;
   }
 
-  .lm-sec-nine .lm-sec-nine-wrapper .content {
+  .lm-sec-thirteen .lm-sec-thirteen-wrapper .content {
     padding: 15px;
   }
 
-  .lm-sec-nine .lm-sec-nine-wrapper {
+  .lm-sec-thirteen .lm-sec-thirteen-wrapper {
     background-position: center;
   }
 }
@@ -1166,28 +1280,49 @@ dl {
     font-size: 13px;
   }
 
-  .lm-sec-four .section-element-wrapper .section-background {
-    padding: 15px 15px 30px;
+  .lm-sec-eight .lm-item {
+    margin-bottom: 25px;
   }
 
-  .lm-sec-six .section-bottom .lm-content {
-    padding: 20px;
+  .lm-sec-seven .lm-box-content {
+    padding: 15px 10px;
+    margin-top: 20px;
   }
 
-  .lm-sec-four .section-element-wrapper .section-background {
-    padding: 15px 15px 30px;
+  .lm-sec-seven .lm-box-content ul {
+    padding-left: 5px;
   }
 
-  .lm-sec-four .section-element-wrapper .lm-box-content {
-    padding: 15px;
+  .lm-sec-seven .lm-box-content ul li {
+    align-items: start;
+    gap: 7px;
+    padding: 7px 0px;
   }
 
-  .lm-sec-four .section-element-wrapper .lm-box-content p {
-    font-size: 14px;
+  .lm-sec-seven .lm-box-content ul li img {
+    margin-top: 5px;
+    width: 20px;
   }
 
   .accordion-wrapper .accordion-body {
-    padding: 5px 15px 15px;
+    padding: 5px;
+  }
+
+  .accordion-wrapper .accordion-button {
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+  }
+
+  .lm-sec-six .lm-box-content {
+    padding: 15px;
+    width: 94%;
+  }
+
+  .lm-sec-six .lm-box-content .lm-sec-title {
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    border: none;
   }
 
   .lm-sec-five .section-wrapper {
@@ -1206,6 +1341,11 @@ dl {
 
   .lm-service-item .lm-content {
     padding: 25px 10px;
+  }
+
+  .lm-sec-nine .lm-sec-wrapper .lm-sec-inner .lm-box-content {
+    max-width: 92%;
+    padding: 15px;
   }
 
   .accordion-wrapper .accordion-button {
@@ -1266,10 +1406,6 @@ dl {
     font-size: 18px;
   }
 
-  .lm-sec-eight .lm-thumb img {
-    margin-top: 20px;
-  }
-
   .lm-sec-two h1 {
     font-size: 28px;
     line-height: 30px;
@@ -1279,7 +1415,19 @@ dl {
     font-size: 15px;
   }
 
-  .lm-sec-seven .lm-sec-wrapper-bottom .right-content .lm-sec-title {
-    font-size: 22px;
+  .lm-sec-five .section-element-wrapper .section-background {
+    padding: 15px 15px 30px;
+  }
+
+  .lm-sec-five .section-element-wrapper .section-background {
+    padding: 15px 15px 30px;
+  }
+
+  .lm-sec-five .section-element-wrapper .lm-box-content {
+    padding: 15px;
+  }
+
+  .lm-sec-five .section-element-wrapper .lm-box-content p {
+    font-size: 14px;
   }
 }
